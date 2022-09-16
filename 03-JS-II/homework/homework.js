@@ -128,7 +128,7 @@ function fizzBuzz(numero) {
   // Si "numero" es divisible entre 3 y 5 (ambos), devuelve "fizzbuzz"
   // De lo contrario, devuelve el numero
   if (numero % 3 === 0 && numero % 5 === 0) {
-    return "fizzBuzz";
+    return "fizzbuzz";
   }
   if (numero % 5 === 0) {
     return "buzz";
@@ -172,39 +172,67 @@ function esPrimo(numero) {
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
 
-  if(numero % numero === 0 && numero % 1 === numero){
-
-
-    return 'Es numero primo'
+  if( numero < 2) return false;
+  if(numero === 2) return true;
+  for(var i = 2; i < numero; i++) {
+    if(numero % i === 0) {
+      return false;
+    }
   }
-else{
-  return 'falso'
+  return true;
 }
 
-
-}
 
 function esVerdadero(valor) {
   //Escribe una función que reciba un valor booleano y retorne “Soy verdadero”
   //si su valor es true y “Soy falso” si su valor es false.
   //Escribe tu código aquí
+
+  if(valor === true) {
+    return 'Soy verdadero';
+}
+  return 'Soy falso'
 }
 
 function tablaDelSeis() {
   //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
   //Escribe tu código aquí
-}
+
+  let tabla = []
+
+  for (let i = 0; i <= 60; i++) {
+     if (i % 6 === 0){
+ 
+         tabla.push(i);
+     }
+ 
+     
+ }
+ return tabla;
+ }
 
 function tieneTresDigitos(numero) {
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí
-}
+  if (numero <= 999){
+    return true
+  }
+  return false;
+  }
 
 function doWhile(numero) {
   //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
   //Retornar el valor final.
   //Usar el bucle do ... while.
+  let resultado = numero
+   
+  for (let i = 0; i < 8; i++) {
+
+    numero += 5;
+  
+}
+return resultado;
 }
 
 // No modificar nada debajo de esta línea
